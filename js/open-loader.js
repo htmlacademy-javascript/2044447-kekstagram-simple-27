@@ -1,5 +1,5 @@
 import { isEscapeKey } from './util.js';
-import { toggleScale } from './toggler_scale.js';
+import { toggleScale } from './toggler-scale.js';
 import { changeFilter } from './slider.js';
 import { resetForm } from './preview-photo.js';
 
@@ -15,11 +15,14 @@ const openForm = () => {
 
     document.addEventListener('keydown', (evt) => {
       if (isEscapeKey(evt)) {
+        if(!body.querySelector('.error')) {
+          evt.preventDefault();
+          loader.classList.add('hidden');
+          resetForm();
+        }
         evt.preventDefault();
-        loader.classList.add('hidden');
-        resetForm();
-      }
-    });
+
+      }});
   });
   toggleScale();
   changeFilter();

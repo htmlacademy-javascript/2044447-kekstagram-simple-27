@@ -1,5 +1,5 @@
 import { setDefaultEffects } from './slider.js';
-import { SCALE_MAX, scalePhotoPreview } from './toggler_scale.js';
+import { SCALE_MAX, scalePhotoPreview } from './toggler-scale.js';
 
 const FILE_TYPES = ['jpg', 'jpeg', 'png'];
 const PREVIEW_DEFAULT = 'img/upload-default-image.jpg';
